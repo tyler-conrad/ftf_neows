@@ -1,0 +1,71 @@
+#:kivy 1.0.9
+#:import Calendar uix.calendar_grid.Calendar
+
+<Calendar>:
+    size_hint: 0.9, 0.9
+
+<LoadingSpinner>:
+    Image:
+        source: 'assets/spinner.gif'
+        x: self.parent.x + self.parent.width * 0.5 - self.width * 0.5
+        y: self.parent.y + self.parent.height * 0.5 - self.height * 0.5
+        keep_ratio: True
+
+<PreviousButton>:
+    Image:
+        source: 'assets/previous_arrow.png'
+        x: self.parent.x + self.parent.width * 0.5 - self.width * 0.5
+        y: self.parent.y + self.parent.height * 0.5 - self.height * 0.5
+        keep_ratio: True
+
+<NextButton>:
+    Image:
+        source: 'assets/next_arrow.png'
+        x: self.parent.x + self.parent.width * 0.5 - self.width * 0.5
+        y: self.parent.y + self.parent.height * 0.5 - self.height * 0.5
+        keep_ratio: True
+
+<NeoRow>:
+    canvas.before:
+        Color:
+            rgba: 0.0, 0.0, 0.0, 1.0
+        Rectangle:
+            pos: self.x, self.y
+            size: self.width, self.height
+        Color:
+            rgba: 0.3, 0.3, 0.3, 1.0
+        Rectangle:
+            pos: self.x + 1.0, self.y + 1.0
+            size: self.width - 2.0, self.height - 2.0
+
+BoxLayout
+    orientation: 'vertical'
+    canvas.before:
+        Color:
+            rgba: 0.2, 0.2, 0.2, 1.0
+        Rectangle
+            pos: self.x, self.y
+            size: self.width, self.height
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: 0.1
+
+        Label:
+            size_hint_x: 0.6
+            text: 'Near Earth Object Browser'
+            font_size: 30.0
+
+        RemainingRequestsLabel:
+            size_hint_x: 0.3
+            font_size: 30.0
+
+        DateButton:
+            size_hint_x: 0.1
+            Image:
+                source: 'assets/calendar.png'
+                x: self.parent.x + self.parent.width * 0.5 - self.width * 0.5
+                y: self.parent.y + self.parent.height * 0.5 - self.height * 0.5
+                keep_ratio: True
+
+    Body:
+        size_hint_y: 0.9

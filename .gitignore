@@ -1,0 +1,6 @@
+.idea
+database.json
+database.json.lock
+venv
+__pycache__
+test/__pycache__
