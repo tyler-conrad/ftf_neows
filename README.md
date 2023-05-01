@@ -1,17 +1,17 @@
-# Fund That Flip newWs Coding Challenge
+# Fund That Flip neoWs Coding Challenge
 A near earth object browser utilizing the NASA NEO API.  The application is built with the Kivy UI
 framework, aiohttp, and the pyson database.  Tests are implemented using pytest.
 
 ![Demo](demo.gif)
 
-## Decision Decisions
+## Implementation Decisions
 I decided to implement the storage of NEO data based on user input from the UI.  The basic reasoning
 here is that the NEO API allows 2000 requests per hour.  This limits the ability to store all the
 data using an API crawler due to the fact that the API supports at most a week of data per request.
 Since there are 2107 weeks between 12-10-1982 and 04-30-2023 the API limit would be reached and
 there would be an hour delay before additional data could be requested.
 
-On the other, the crawler approach may have been feasible given that the request limit is reset
+On the other hand, the crawler approach may have been feasible given that the request limit is reset
 based on a running counter, and if the latency of the requests allowed for the counter to reset
 before the limit was reached then the data could be stored in a single run. But the crawler would
 still take over an hour to complete.
