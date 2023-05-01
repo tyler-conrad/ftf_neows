@@ -38,3 +38,7 @@ semantic structure of the JSON data as opposed to flattening it into a tabular f
 8. Upgrade the build dependencies for the Python 3.10 virtual environment: `python -m pip install --upgrade pip setuptools`
 9. Install the project dependencies: `python -m pip install -r requirements.txt`
 10. Run the application: `python main.py`
+
+## Testing
+1. Make sure your current working directory is the repository root folder.
+2. Run: `pytest`
