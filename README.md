@@ -29,6 +29,7 @@ semantic structure of the JSON data as opposed to flattening it into a tabular f
 2. Install Python 3.10 as currently required by the Kivy: `brew install python@3.10` - this will not overwrite your default python installation
 3. Install system dependencies required for Kivy: `brew install pkg-config sdl2 sdl2_image sdl2_ttf sdl2_mixer`
 4. Update the system Python3 build dependencies: `python3 -m pip install --upgrade pip setuptools virtualenv`
+5. Clone the repository: `git clone https://github.com/tyler-conrad/ftf_neows.git`
 5. Navigate into the cloned repository: `cd ftf_neows`
 6. Create a virtual environment based on Python 3.10: `python3 -m virtualenv -p  /opt/homebrew/opt/python@3.10/libexec/bin/python venv`
 7. Activate the virtual environment: `source venv/bin/activate`
