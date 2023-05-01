@@ -2,7 +2,7 @@
 A near earth object browser utilizing the NASA NEO API.  The application is built with the Kivy UI
 framework, aiohttp, and the pyson database.  Tests are implemented using pytest.
 
-## Decision Decisions
+## Implementation Decisions
 I decided to implement the storage of NEO data based on user input from the UI.  The basic reasoning
 here is that the NEO API allows 2000 requests per hour.  This limits the ability to store all the
 data using an API crawler due to the fact that the API supports at most a week of data per request.
