@@ -1,4 +1,4 @@
-# Fund That Flip newWs Coding Challenge
+# Fund That Flip neoWs Coding Challenge
 A near earth object browser utilizing the NASA NEO API.  The application is built with the Kivy UI
 framework, aiohttp, and the pyson database.  Tests are implemented using pytest.
 
