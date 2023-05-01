@@ -1,4 +1,4 @@
 aiohttp==3.8.4
-Kivy==2.1.0
+kivy[base]
 pysondb==1.6.7
 pytest==7.3.1
